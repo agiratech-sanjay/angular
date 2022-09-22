@@ -1,0 +1,13 @@
+<button (click)="onclick($event)"> GREET</button>{{greet}}
+<br>
+
+<input [id]="ids" type="text" value="sanjay"> 
+<input disabled [id]="ids" type="text" value="sanjay"> 
+
+
+<p style=" width: 10rem; border:3px solid black ">binding works!</p>
+
+<h2 [class.text-danger]="errs">Text is in red, when condition is true class binding</h2>
+
+<p [style.color]="'orange'"> style binding </p>
+<p [ngStyle]="titleBind"> STYLE BINDING 2</p>

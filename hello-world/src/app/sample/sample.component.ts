@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sample.component.css']
 })
 export class SampleComponent implements OnInit {
+  public siteurl = window.location.href;
 
   constructor() { }
 

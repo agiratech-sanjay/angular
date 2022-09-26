@@ -4,11 +4,34 @@
 
 <hr>
 <input [(ngModel)]="two_bind" type="text">{{two_bind}} -->
-<div id="login">
-<h1>LOGIN PAGE</h1>
+
+<!-- <div class="container">
 <form>
-<input type="text" #name1 >
-<input #password type="password">
-<button (click)="aler(name1.value)">SUBMIT</button>
+<h1>LOGIN PAGE</h1>
+<input class="input" type="text" #name1 ><br>
+<input class="input" #password type="password"><br>
+<button class="input" id="button"  (click)="aler(name1.value)">SUBMIT</button>
 </form>
-</div>
+</div> -->
+<div id="full">
+<div id="center">
+    <div class="login">    
+        <form id="login" >    
+        <h2>Login Page</h2><br>    
+        <label><b>User Name     
+        </b>    
+        </label>    
+        <input #name1 type="text" name="Uname" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input #password type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <br><br>    
+        <input (click)="aler(name1.value)" type="button" name="log" id="log" value="Log In Here">       
+        <br><br>    
+           
+     </form>     
+     </div>    
+    </div>
+</div> 

@@ -1,0 +1,35 @@
+
+<div *ngIf="displayname;then thenblock; else elseblock"></div>
+
+<ng-template #thenblock>
+    <h2>
+        1st block is executed
+    </h2>
+</ng-template>
+<ng-template #elseblock>
+    <h2>
+        else block is executed
+    </h2>
+</ng-template>
+
+<hr>
+ 
+<div [ngSwitch] = "color">
+    <div *ngSwitchCase = "'blue'">blue color</div>
+    <div *ngSwitchCase = "'green'">green color</div>
+    <div *ngSwitchCase = "'pink'">pink color</div>
+    <div *ngSwitchDefault>pick another color</div>
+</div>
+<br>
+<hr>
+
+<div *ngFor="let cols of colors;index as i;odd as o">
+    <h2>{{i}} {{cols}} {{o}}</h2>
+</div>
+
+<br>
+<hr>
+
+<h2>{{"welcome boss " + abc}}</h2>
+
+<button (click) = "fireEvent()"> Event INi by child</button>

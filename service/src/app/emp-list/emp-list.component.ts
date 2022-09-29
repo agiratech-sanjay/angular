@@ -10,12 +10,15 @@ export class EmpListComponent implements OnInit {
 
  
   public employees:any = [];
+  public err_Msg: any;
+
 
   constructor(private _empservice : EmpserviceService) { }
 
-  ngOnInit(){
-     this._empservice.getemployees()
-     .subscribe(data =>this.employees = data);
-  }
+  ngOnInit(): any{
+    this._empservice.getemployees().subscribe({next:(data) => {this.employees=data},
+      error:(erorr) => {this.err_Msg=erorr}
+  })
+}
 
 }

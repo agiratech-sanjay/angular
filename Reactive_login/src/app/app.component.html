@@ -1,0 +1,20 @@
+<br>
+<h1>LOGIN FORM BY REACTIVE METHOD</h1>
+<form [formGroup]="loginform" (ngSubmit)="loginuser()">
+<input type="text" placeholder="enter name" formControlName="user">
+<br><span *ngIf="user && user.invalid && user.touched" style="color:red;">
+   PLEASE ENTER THE NAME CORRECT MANNER
+</span>
+ <br><br>
+<input type="password" placeholder="PassWord .." formControlName="password">
+<br><span *ngIf="password && password.invalid && password.touched" style="color:red;">
+  ENTER THE PASSWORD CORRECTLY
+</span>
+ <br><br>
+<button [disabled]="loginform.invalid">SubMit </button>
+</form>
+
+
+
+
+<router-outlet></router-outlet>

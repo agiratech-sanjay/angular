@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 selector: 'app-dep-list',
 template: `
 <p>
-dep-list works!
+dep-list works! 
 </p>
 `,
 styles: []

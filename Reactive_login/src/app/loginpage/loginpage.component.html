@@ -1,0 +1,45 @@
+
+
+<div id="content" class="flex">
+    <div class="">
+      
+       <div class="page-content page-container" id="page-content">
+          <div class="padding">
+             <div class="row">
+                <div class="col-md-8">
+                   <div class="card">
+                      <div class="card-header"><strong>LOGIN FORM BY REACTIVE METHOD</strong></div>
+                      <div class="card-body">
+                         <form  [formGroup]="loginform" (ngSubmit)="loginuser()">
+                            <div class="form-group">
+                                <label class="text-muted" for="exampleInputEmail1">Email address</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter UserName" formControlName="user">
+                                <span *ngIf="user && user.invalid && user.touched" style="color:red;">
+                                    PLEASE ENTER THE NAME CORRECT MANNER
+                                 </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-muted" for="exampleInputPassword1">Password</label>
+                                <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
+                                <span *ngIf="password && password.invalid && password.touched" style="color:red;">
+                                    ENTER THE PASSWORD CORRECTLY
+                                  </span>
+                            </div>
+                            <br>
+                            <div id="regbutton">
+                              <div id="submit">
+                              <button [disabled]="loginform.invalid" type="submit" class="btn btn-primary"  (click)="welcome()">Submit</button>
+                            </div>
+                            <div id="signup">
+                              <button class="btn btn-primary" >Sign Up</button>
+                            </div>
+                           </div>
+                         </form>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+  </div>
+  

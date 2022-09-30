@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-temp',
   templateUrl: './temp.component.html',
@@ -20,5 +20,10 @@ export class TempComponent implements OnInit {
   aler(value:any){
     window.alert(value);
   }
+
+    loginUser(item:any){
+      console.warn(item);
+    }
+
 
 }

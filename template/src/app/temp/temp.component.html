@@ -16,19 +16,22 @@
 <div id="full">
 <div id="center">
     <div class="login">    
-        <form id="login" >    
+        <form id="login" #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">    
         <h2>Login Page</h2><br>    
         <label><b>User Name     
         </b>    
         </label>    
-        <input #name1 type="text" name="Uname" id="Uname" placeholder="Username">    
+        <input #name1="ngModel" type="text" name="Uname" id="Uname" placeholder="Username" ngModel required pattern="[a-zA-z+$]">   <br> 
+        <span *ngIf="name1.invalid && name1.touched" style="color: rgb(255, 0, 0); font-size: larger; font: weight 200px;">Please Enter the Correct Name</span>
         <br><br>    
         <label><b>Password     
         </b>    
         </label>    
-        <input #password type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <input #password="ngModel" type="Password" name="Pass" id="Pass" placeholder="Password" ngModel required minlength="3" >  
+        <br>
+        <span *ngIf="password.invalid && password.touched" style="color: rgb(255, 0, 0); font-size: larger;">Please Enter the Correct Password</span>  
         <br><br>    
-        <input (click)="aler(name1.value)" type="button" name="log" id="log" value="Log In Here">       
+        <button [disabled]="loginForm.invalid" >submit</button>      
         <br><br>    
            
      </form>     

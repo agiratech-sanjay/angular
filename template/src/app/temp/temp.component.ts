@@ -17,9 +17,9 @@ export class TempComponent implements OnInit {
  console.log(value);
 }
 
-  aler(value:any){
-    window.alert(value);
-  }
+  // aler(value:any){
+  //   window.alert(value);
+  // }
 
     loginUser(item:any){
       console.warn(item);

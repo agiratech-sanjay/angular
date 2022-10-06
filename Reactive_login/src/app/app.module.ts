@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { WelPageComponent } from './wel-page/wel-page.component';
 import { SignpageComponent } from './signpage/signpage.component';
+import { DetailComponent } from './wel-page/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SignpageComponent } from './signpage/signpage.component';
     LoginpageComponent,
     WelPageComponent,
     SignpageComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

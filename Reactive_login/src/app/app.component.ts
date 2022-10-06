@@ -10,5 +10,7 @@ import { Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Reactive_login';
+  mymobile:string = "/home/agira/Documents/angular/Reactive_login/src/assets/images/mobile.jpeg"
   
+
 }

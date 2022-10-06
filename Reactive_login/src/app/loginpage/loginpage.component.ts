@@ -12,10 +12,12 @@ import { Router } from '@angular/router';
 })
 export class LoginpageComponent implements OnInit {
   loginform = new FormGroup({
-    user: new FormControl('',[Validators.required,Validators.pattern("[a-zA-Z]+$")]),
+    user: new FormControl('',[Validators.required,Validators.email]),
+    // user: new FormControl('',[Validators.required,Validators.pattern("[a-zA-Z]+$")]),
+
     password:new FormControl('',[Validators.required,Validators.minLength(5)])
   });
-  
+  //
   loginuser(){
     console.log(this.loginform.value); 
   }
@@ -35,7 +37,7 @@ export class LoginpageComponent implements OnInit {
   }
 
   welcome(){
-    this.route.navigate(["welpage"])
+    this.route.navigate(["welpage"]);
   }
 
 }

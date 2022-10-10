@@ -18,7 +18,7 @@ export class WelPageComponent implements OnInit {
 
   function(i:any){
   this.route.navigate(['welpage/detail/',i.id])    
-    console.log("helo")
+    // console.log("helo")
   }
 
 }
